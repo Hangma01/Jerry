@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+#myStamp--container {
+	max-width: 1200px;
+	width: 100%;
+	height: 1500px;
+	margin-top: 50px;
+}
+
+.myStamp--main{
+    display: flex;
+    margin-top: 70px;
+    height: 700px;
+}
+
+.myStamp--category {
+	width: 150px;
+	height: 200px;
+}
+
+.myStamp--category a{
+	margin-top: 13px;
+}
+
+.myStamp--myStamp{
+	background: #fdd000;
+}
+
+.myStamp--myStamp a{
+	color: white;
+	text-decoration: none;
+}
+
+.myStamp--myMovie, .myStamp--myProduct, .myStamp--myStamp, .myStamp--myEdit, .myStamp--myReview {
+	display: flex; 
+	transition-duration: 0.3s;
+	justify-content: center; /* 가로 중앙 정렬 */
+	align-items: center;     /* 세로 중앙 정렬 */
+	height: 50px;
+    min-width: 150px;
+}
+
+.myStamp--myMovie:hover, .myStamp--myProduct:hover, .myStamp--myEdit:hover, .myStamp--myReview:hover {
+	background: #fdd000;
+}
+
+.myStamp--myMovie a, .myStamp--myProduct a, .myStamp--myEdit a, .myStamp--myReview a {
+	transition-duration: 0.3s;
+	color: black;
+	text-decoration: none;
+}
+
+.myStamp--myMovie:hover a, .myStamp--myProduct:hover a, .myStamp--myEdit:hover a, .myStamp--myReview:hover a {
+	color: white;
+}
+
+.myStamp--content{
+    margin-left: 50px;
+}
+
+.myStamp--title{
+    width: 100px;
+}
+
+.myStamp--title2{
+	width: 70px;
+}
+
+.myStamp--stampinfo{
+	margin-bottom: 100px;
+}
+
+.myStamp--stampinfo td {
+	text-align: center;
+	border: 3px solid #fdd000;
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+}
+
+.myStamp--table{
+	width: 100px;
+	height: 100px;
+	border-collapse: collapse;
+}
+
+.myStamp--stampimg{
+	width: 80px;
+}
+
+.myStamp--couponinfo{
+	width: 800px;
+}
+
+.myStamp--coupon{
+	width: 200px;
+	height: 190px;
+	border-radius: 15px;
+	border: 3px solid;
+	border-color: #fdd000;
+	padding: 30px;
+	transition-duration: 0.3s;
+}
+
+.myStamp--couponbtn{
+	width: 80px;
+	height: 40px;
+	border: none;
+	border-radius: 10px;
+	background: #fdd000;
+	color: white;
+}
+
+#myStamp--col {
+	margin-bottom: 50px;
+}

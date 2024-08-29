@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+#myEdit--container {
+	max-width: 1200px;
+	width: 100%;
+	height: 1000px;
+	margin-top: 50px;
+}
+
+.myEdit--main{
+    display: flex;
+    margin-top: 70px;
+    height: 700px;
+}
+
+.myEdit--content{
+    margin-left: 50px;
+}
+
+.myEdit--title{
+    width: 200px;
+}
+
+.myEdit--editbox{
+	margin-top: 60px;
+	width: 800px;
+	height: 500px;
+	padding: 55px;
+	border: 2px solid #fdd000;
+	border-radius: 10px;
+}
+
+.myEdit--editbox form {
+	margin-left: 130px;
+	position: relative;
+    max-width: 600px;
+}
+
+.myEdit--editbox label {
+    width: 120px;
+}
+
+.myEdit--editbox input[type="text"], .editbox input[type="password"], .editbox input[type="email"] {
+    margin-bottom: 10px;
+}
+
+.myEdit--editbox input[type="submit"] {
+	position: absolute;
+    width: 70px;
+	padding: 10px;
+	left: 30%;
+	border: none;
+	border-radius: 10px;
+	background: #fdd000;
+	color: white;
+}

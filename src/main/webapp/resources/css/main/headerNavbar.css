@@ -1,0 +1,283 @@
+:root {
+	-main-color: #fdd000;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+    overflow-x: hidden;
+}
+
+header a {
+	text-decoration: none;
+	color: black;
+}
+
+/* header */
+header {
+	background: white;
+	width: 100vw;
+	height: 8rem;
+	position: fixed;
+	top: 0;
+	border-bottom: 1px solid lightgray;
+	align-items: center;
+	z-index: 3;
+	font-family: "Noto Sans KR", sans-serif;
+}
+
+.header--navbar {
+	width: 1200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	margin: auto;
+}
+
+.header--contents--container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#header--logo--img {
+	height: 50%;
+	width: 80%;
+}
+.header--scroll--img {
+	height: 40%;
+	width: 65%;
+}
+
+.header--h1 {
+	box-sizing: border-box;
+	margin: 0;
+	height: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+.header--memberInfo {
+	display: flex;
+	margin: 0;
+}
+
+.header--memberInfo li {
+	list-style-type: none;
+	display: block;
+	margin-right: 0px;
+	margin-left: 40px;
+	text-align: center;
+	height: 100%;
+}
+
+.navbar--items li {
+	list-style-type: none;
+}
+
+.header--icon {
+	font-size: 25px;
+	display: block;
+	margin-bottom: 10px;
+	color: black;
+}
+
+/* nav */
+.header--nav {
+	border-bottom: 3px solid #fdd000;
+	background-color: white;
+	margin-top: 1px;
+	display: flex;
+	justify-content: center;
+	z-index: 1;
+}
+
+.navbar {
+	height: 4rem;
+}
+
+.navbar--items {
+	display: flex;
+	gap: 50px;
+	font-size: 1.2rem;
+	width: 60%;
+	height: 100%;
+	margin: 0;
+	align-items: center;
+}
+
+.navbar--item {
+	padding-right: 40px;
+	width: 15%;
+	position: relative;
+}
+
+.nav--searchBox {
+	background-color: white;
+	display: flex;
+	align-items: center;
+	padding: 5px 30px 5px 30px;
+	box-sizing: border-box;
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+	font-size: 1.2rem;
+}
+
+.nav--searchBox--button  {
+    background: none;
+    border: none;
+}
+
+
+.nav--searchBox--input {
+	width: 200px;
+	border: none;
+	outline: none;
+	margin-right: 10px;
+}
+
+.nav--search--icon {
+	font-size: 1.5rem;
+}
+
+.navbar--item a:hover span {
+	font-weight: bold;
+	color: #e99e28;
+	font-size: 1.3rem;
+}
+
+.navbar--item span {
+	transition: color 0.1s ease, font-weight 0.1s ease, font-size 0.1s ease;
+	position: relative;
+	z-index: 1;
+	font-size: 1.2rem;
+}
+
+.table {
+	margin-top: 60px;
+	width: 900px;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+/* header 스크롤 */
+.header--scroll--wrap {
+	display: flex;
+	justify-content: center;
+	background-color: #fdd000;
+	height: 100px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	opacity: 0;
+	visibility: hidden;
+	font-family: "Noto Sans KR", sans-serif;
+}
+
+.header--scroll--wrap.show {
+	display: flex;
+	opacity: 1;
+	visibility: visible;
+	z-index: 3;
+	background-color: #fdd000;
+	border-bottom: 2px solid hwb(49 0% 17%);
+}
+
+.header--scroll--header {
+	display: flex;
+	justify-content: space-between;
+	width: 1200px;
+	align-items: center;
+}
+
+.header--scroll--logoImg {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.header--scroll--nav {
+	display: flex;
+	height: 100%;
+}
+
+.header--scroll--nav ul {
+	display: flex;
+	justify-content: space-around;
+	margin: auto;
+	height: 100%;
+	align-items: center;
+}
+
+.header--scroll--nav li {
+	list-style-type: none;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 1.4rem;
+	display: flex;
+	align-items: center;
+	width: 130px;
+	box-sizing: border-box;
+	transition: font-size 0.1s ease;
+}
+
+.header--scroll--nav a {
+	transition: text-shadow 0.1s ease, color 0.1s ease, font-weight 0.1s
+		ease, font-size 0.1s ease;
+	color: white;
+	font-weight: bold;
+text-shadow: -.08em .08em #f2a40c;
+}
+
+.nav--scroll--searchBox {
+	background-color: white;
+	display: flex;
+	align-items: center;
+	padding: 5px 30px 5px 30px;
+	box-sizing: border-box;
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+	font-size: 1.2rem;
+	height: 50%;
+	border-radius: 10px;
+}
+
+.nav--scroll--searchBox--input {
+	width: 200px;
+	border: none;
+	outline: none;
+	margin-right: 10px;
+	color: #7d7d7d;
+}
+
+.nav--scroll--search--icon {
+	font-size: 1.5rem;
+}
+
+.header--scroll--nav a:hover {
+	font-size: 1.5rem;
+}
+
+/* 장바구니 개수 표시 */
+#header--basket{
+	position: relative;	
+}
+.header--basket--countDiv{
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	color: white;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	border-radius: 10px;
+	position: absolute;
+	right: 0px;
+	top: -10px;
+	font-size: 15px;
+}

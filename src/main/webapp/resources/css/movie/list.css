@@ -1,0 +1,263 @@
+body{
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+#list--container{
+	width: 100%;
+}
+
+#list--contents{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.list--wrap-movie-chart{
+	width: 100%;
+}
+
+.list--heading-wrap{
+	width: 100%;
+	height: 63px;
+	padding: 30px 0px 0px;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list--header{
+	margin: 0px;
+	font-size: 36px;
+}
+
+.list--submenu{
+	display: flex;
+}
+
+.list--submenu-ul{
+	list-style-type : none;
+}
+
+.list--submenu-ul-li{
+	display: inline;
+}
+
+.list--submenu-ul-li-2{
+	margin: 0px 0px 0px 13px;
+}
+
+.list--submenu-a{
+	color: #666666;
+	text-decoration-line: none;
+	font-size: 16px;
+	font-weight: normal;
+	padding: 0px 0px 0px 13px;
+}
+
+
+.list--select{
+	color: #FDD000;
+	font-weight: bold;
+	font-size : 17px;
+}
+
+.list--hr{
+	border: solid 1px black;
+}
+
+.list--sect-sorting{
+	width: 100%;
+	height: 29px;
+}
+
+
+
+.list--sect-sorting-ul{
+	list-style-type: none;
+	display: flex;
+    justify-content: flex-end;
+}
+
+.list--sect-sorting-ul-li{
+	height: 21px;
+}
+
+.list--sect-sorting-ul-li-1{
+	padding: 0px 14px 0px 0px;
+}
+
+.list--sect-sorting-ul-li-2{
+	padding: 0px 0px 0px 14px;
+}
+
+.list--sect-movie-chart{
+	width: 100%;
+	margin: 30px 0px 0px;
+}
+
+.list--sect-sorting-a{
+	color: #666666;
+	text-decoration-line: none;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.list--sort{
+	color: #FDD000;
+	font-weight: bold;
+	font-size : 17px;
+}
+
+.list--sect-sorting-ul-li-1{
+	border-right: solid 1px lightgray;
+}
+
+.list--sect-movie-chart-ol{
+	width: 100%;
+	padding: 0px;
+	flex-wrap: wrap;
+	display: flex;
+	list-style-type: none;
+	column-gap: 80px;
+}
+
+.list--box-image{
+	width: 100%;
+	height: 347px;
+	padding-bottom: 5px;
+}
+
+.list--thumb-image {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.list--movie-poster {
+    display: block;
+    width: 240px; 
+    height: 342px; 
+    padding: auto;
+    transition: transform 0.3s ease;
+}
+
+.list--movie-poster:hover {
+    transform: scale(1.1); /* 이미지 확대 (1.1배) */
+}
+
+.list--age {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.list--sect-movie-chart-ol-li{
+	width:240px;
+	list-style-type: none;
+	padding: 0px 0px 30px 0px;
+	box-sizing: border-box;
+}
+
+
+.list--box-contents{
+	width: 240px;
+	height: 93px;
+}
+
+.list--box-contents-a{
+	text-decoration-line: none;
+}
+
+.list--title{
+	color: #333333;
+	display: block;
+	font-size: 20px;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	
+}
+
+.list--score{
+	width:197px;
+	height:16.02px;
+	display: flex;
+	align-items: center;
+	padding: 10px 0px 15px;
+}
+
+.list--percent{
+	color: #666666;
+	font-size: 14px;
+	border-right: solid 1px lightgray;
+	padding: 0px 14px 0px 0px;
+}
+
+.list--star-rating{
+	width:70px;
+	height: auto;
+	padding: 0px 0px 4px 14px;
+}
+
+.list--star{
+	font-size: 14px;
+}
+
+.list--like{
+	display: inline-block;
+	width: 194px;
+	height: 25px;
+}
+
+.list--link-reservation{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:97px;
+	height: 25px;
+	text-decoration: none;
+	font-weight:bold;
+	font-size:12px;
+	background:#FDD000;
+	color: white;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.list--sect-movie-chart-ol-after{
+	padding: 30px 0px 0px;
+}
+
+.active > .detail--page-link{
+	background-color : #FDD000;
+	border-color: #FDD000;
+}
+
+.detail--page-link{
+	color:black;
+}
+
+.list--Dday{
+	color:red;
+	
+}
+
+.list--Dday--box{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: red;
+	color: white;
+	border-radius: 0px 0px 0px 10px;
+	display: block;
+	font-size: 15px;
+	padding: 5px 15px;
+	max-width: 200px;
+}
+
+

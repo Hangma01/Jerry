@@ -1,0 +1,133 @@
+Table member {
+    member_id varchar [primary key]
+    member_name varchar [not null]
+    member_password varchar [not null]
+    member_phone varchar [not null]
+    member_email varchar [unique, not null]
+    member_coupon integer [default: 0]
+    member_admin char [default: 'N']
+    member_stamp integer [default: 0]
+    member_img varchar [default: 'default.jpg']
+}
+
+Table movie {
+    movie_no integer [primary key, increment]
+    movie_title varchar [not null]
+    movie_start_date date [not null]
+    movie_end_date date [not null]
+    movie_director varchar [not null]
+    movie_actor varchar [not null]
+    movie_genre varchar [not null]
+    movie_age_limit varchar [not null]
+    movie_showtime integer [not null]
+    movie_nationality varchar [not null]
+    movie_summary text [not null]
+    movie_main_image varchar [not null]
+    movie_sub_image varchar [not null]
+    movie_ssub_image varchar [not null]
+    movie_trailer varchar
+    movie_main_trailer varchar [not null]
+    movie_sub_trailer varchar
+    movie_ssub_trailer varchar
+    movie_main_thumbnail varchar [not null]
+    movie_sub_thumbnail varchar
+    movie_ssub_thumbnail varchar
+}
+
+Table review {
+    review_no integer [primary key, increment]
+    review_member_id varchar [not null, ref: > member.member_id]
+    review_movie_no integer [not null, ref: > movie.movie_no]
+    review_content varchar [not null]
+    review_write_date date [default: `SYSDATE`]
+    review_star_rating integer [not null]
+}
+
+Table likes {
+    likes_no integer [primary key, increment]
+    likes_review_no integer [ref: > review.review_no]
+    likes_member_id varchar [ref: > member.member_id]
+}
+
+Table product {
+    product_no integer [primary key, increment]
+    product_code varchar [not null]
+    product_price integer [not null]
+    product_name varchar [not null]
+    product_origin varchar [not null]
+    product_image varchar [not null]
+    product_content varchar [not null]
+}
+
+Table basket {
+    basket_no integer [primary key, increment]
+    basket_product_no integer [not null, ref: > product.product_no]
+    basket_count integer [not null]
+    basket_member_id varchar [not null, ref: > member.member_id]
+    basket_status char [default: 'N']
+}
+
+Table cinema {
+    cinema_no integer [primary key, increment]
+    cinema_rlg varchar [not null]
+    cinema_blg varchar [not null]
+    cinema_movie_no integer [not null, ref: > movie.movie_no]
+
+}
+
+Table theater {
+    theater_no integer [primary key, increment]
+    theater_start_time date [not null]
+    theater_end_time date [not null]
+    theater_name varchar [not null]
+    theater_cinema_no integer [not null, ref: > cinema.cinema_no]
+
+}
+
+Table seat {
+    seat_no integer [primary key, increment]
+    seat_theater_no integer [not null, ref: > theater.theater_no]
+    seat_row integer [not null]
+    seat_col integer [not null]
+
+}
+
+Table payment {
+    payment_no integer [primary key, increment]
+    payment_type varchar [not null]
+    payment_date date [default: `SYSDATE`]
+    payment_price integer [not null]
+    payment_imp_uid varchar
+}
+
+Table payment_product {
+    payment_product_no integer [primary key, increment]
+    payment_product_payment_no integer [not null, ref: > payment.payment_no]
+    payment_product_basket_no integer [not null, ref: > basket.basket_no]
+
+}
+
+Table ticket {
+    ticket_no integer [primary key, increment]
+    ticket_member_id varchar [not null, ref: > member.member_id]
+    ticket_movie_no integer [not null, ref: > movie.movie_no]
+    ticket_seat varchar [not null]
+    ticket_theater_no integer [not null, ref: > theater.theater_no]
+    ticket_cinema_no integer [not null, ref: > cinema.cinema_no]
+    ticket_payment_no integer [not null, ref: > payment.payment_no]
+    ticket_teen integer [default: 0]
+    ticket_adult integer [default: 0]
+    ticket_senior integer [default: 0]
+    ticket_coupon integer [default: 0]
+}
+
+Table event {
+    event_no integer [primary key, increment]
+    event_name varchar [not null]
+    event_date varchar [not null]
+    event_title_image varchar [not null]
+    event_sub_image varchar [not null]
+}
+
+
+Ref: "event"."event_date" < "event"."event_title_image"

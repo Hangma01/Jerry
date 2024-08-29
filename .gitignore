@@ -1,0 +1,12 @@
+# Ignore Maven properties
+**/pom.properties
+
+# Ignore MANIFEST files
+**/MANIFEST.MF
+/.metadata/
+
+**/appKey.java
+**/appKey.classtarget/
+target/
+target/
+target/

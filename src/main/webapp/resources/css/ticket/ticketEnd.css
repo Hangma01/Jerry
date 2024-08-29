@@ -1,0 +1,57 @@
+.ticketEnd--section{
+
+	height: 890px;
+}
+
+
+.ticketEnd--container{
+	display: flex;
+	width: 1200px;
+	margin: auto;
+	margin-top: 100px;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ticketEnd--image{
+	width: 400px;
+	height: 320px;
+}
+
+.ticketEnd--image > img{
+	width: 100%;
+	height: 100%;
+}
+
+.ticketEnd--container > p{
+	font-size: 35px;	
+}
+
+.changePage {
+	display: flex;
+	gap:30px;
+	margin-top: 40px;
+}
+
+.home--btn{
+	border: 3px solid #ddd;
+	width: 120px;
+	height: 45px;
+	font-size: 22px;
+	border-radius: 6px;
+	text-align: center;
+    padding: 3px;
+}
+
+.ticketCheck--btn{
+	background-color: #ffffff;
+	width: 120px;
+	height: 45px;
+	font-size: 22px;
+	background-color: #fdd000;
+	border-radius: 6px;
+	text-align: center;
+    padding: 4px;
+}
+

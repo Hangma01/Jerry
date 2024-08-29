@@ -1,0 +1,333 @@
+.left--menu--info > ul > li > div > i.show{
+	display: block;
+}
+
+.left--seat--info > ul > li > div > i.show{
+	display: block;
+}
+
+
+.ticket--pay--cotainer{
+	width: 1100px;
+	height: 100%;
+	display: flex;
+}
+
+
+.section--pay--type{
+	width: 60%;
+}
+
+.section--pay{
+	width: 40%;
+
+	}
+
+.section--pay--type > .col--body{
+	background-color: #f8f8f8;
+	padding: 0px;
+}
+
+.section--pay > .col--body{
+	background-color: #ffffff;
+	padding: 0px
+}
+
+.pay--type{
+	height: 100%;
+}
+
+.coupon{
+	height: 50%; 
+	padding: 20px 30px;
+}
+
+.my--coupon--box{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.my--coupon{
+	font-size: 20px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+}
+
+.my--coupon > span {
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.use--coupon{
+	font-size: 14px;
+	font-weight: 400;
+	padding-right: 14px;
+}
+
+.use--coupon > span {
+	color: #FF243E
+}
+
+.coupon--list--box{
+	margin-top: 20px;
+	height: 231px;
+	overflow-y: auto;
+	white-space: nowrap;
+	padding-right: 5px; 
+}
+
+.coupon--list--box::-webkit-scrollbar {
+	width:6px;
+}
+
+.coupon--list--box::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+ }
+
+.coupon--list--box > ul > li{
+	margin-bottom: 5px;
+}
+
+.coupon--btn{
+	width: 100%;
+	height: 72px;
+	border: 1px solid black;
+	border-radius: 6px;
+	background-color: #ffffff;
+}
+
+.coupon--btn--box{
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.coupon--btn--title{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	
+}
+
+.coupon--name{
+	font-size: 17px;
+	font-weight: 600;	
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.coupon--btn--title > span:last-child{
+	font-size: 13px;	
+}
+
+
+.payment--wrap{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+}
+
+.payment--movie--info--box{
+	width: 100%;
+	height: 50%;
+	padding: 20px 30px;
+	border-bottom: 1px solid #ddd;
+}
+
+.ticket--info--title{
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.ticket--info{
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	gap:20px;
+}
+
+.ticket--info--img {
+	width: 130px;
+    height: 160px;
+    border: 1px solid #ddd;
+}
+
+.ticket--info--img > img {
+	width: 100%;
+    height: 100%;
+}
+
+
+.ticket--detail--title{
+	display: flex;
+	align-items:center;
+	font-size: 19px;
+	gap: 10px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.ticket--detail--title > img {
+	width: 25px;
+}
+
+.ticket--detail--info > ul > li{
+	font-size: 14px;
+	margin-bottom: 5px;
+	padding-left: 4px;
+}
+
+.ticket--detail--info > ul > li > span, .seat--info > span{
+	display: inline-block;
+	width: 45px;
+	font-weight: 500;	
+}
+
+
+.payment--box{
+	width: 100%;
+	height: 220px;
+}
+
+.price--box{
+	width: 100%;
+	height: 50px;
+	background-color: #414141;
+	color: white;
+	font-size: 16px;
+	padding: 5px 25px;
+}
+
+.price--box > div{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.ticket--discount{
+	border-top: 1px solid rgba(255, 255, 255, .2);
+	border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+
+
+
+.pay--btn{
+	width: 100%;
+	height: 70px;
+	background-color: #FF243E;
+	border: none;
+	text-align: center;
+	vertical-align: middle;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+
+.uncheck, .check{
+	display: none;
+}
+
+.uncheck.show{
+	display: block;
+}
+
+.check.show{
+	display: block;
+}
+
+.seat--info{
+	display: flex;
+}
+
+.seat--info > div{
+	margin-left: 4px;
+}
+
+
+.pay--inform--blush{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9990;
+	background-color: rgba(0, 0, 0, 0.9);
+	opacity: 0.8;
+}
+
+.pay--inform--blush.show{
+	display: block;
+}
+
+
+.pay--inform--container {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	z-index: 9991;
+}
+
+.pay--inform--container.show {
+	display: flex;
+}
+
+.pay--inform--box{
+	position:absolute;
+	width: 380px;
+	height: 190px;
+	background-color: #ffffff;
+	border-radius: 12px;
+	box-shadow: 2px 1px 36px -6px rgba(66, 68, 90, 1);
+}
+
+.pay--inform--content--box{
+	width: 100%;
+	height: 75%;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 19px;
+	font-weight: 600;
+}
+
+
+.pay--inform--btn--box{
+	width: 100%;
+	height: 25%;
+	border-top: 1px solid #999;
+	display: flex;
+}
+
+.pay--inform--btn{
+	width: 100%;
+	height: 100%;
+	background-color: #ddd;
+	border: none;
+	border-radius: 0px 0px 12px 12px;
+	padding-top: 9px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+}
+
+

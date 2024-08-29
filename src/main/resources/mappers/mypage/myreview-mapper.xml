@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.ss.cinema.mappers.mypage.myReviewMapper">
+
+	<resultMap type="ReviewDTO" id="ReviewResultMap">
+		<id property="reviewNo" column="REVIEW_NO" />
+		<result property="reviewMemberId" column="REVIEW_MEMBER_ID" />
+		<result property="reviewMovieNo" column="REVIEW_MOVIE_NO" />
+		<result property="reviewContent" column="REVIEW_CONTENT" />
+		<result property="reviewWriteDate" column="REVIEW_WRITE_DATE" />
+		<result property="reviewStarRating" column="REVIEW_STAR_RATING" />
+		<result property="reviewLikeCount" column="REVIEW_LIKE_COUNT" />
+	</resultMap>
+	
+	<resultMap type="MyReviewDTO" id="myReviewResultMap">
+		<id property="reviewNo" column="REVIEW_NO" />
+		<result property="movieNo" column="MOVIE_NO" />
+		<result property="movieTitle" column="MOVIE_TITLE" />
+		<result property="movieMainImage" column="MOVIE_MAIN_IMAGE" />
+		<result property="reviewContent" column="REVIEW_CONTENT" />
+		<result property="reviewLikeCount" column="REVIEW_LIKE_COUNT" />
+		<result property="reviewStarRating" column="REVIEW_STAR_RATING" />
+		<result property="reviewWriteDate" column="REVIEW_WRITE_DATE" />
+	</resultMap>
+	
+	
+	<insert id="writeReview">
+		INSERT INTO REVIEW(REVIEW_MEMBER_ID, REVIEW_MOVIE_NO, REVIEW_TICKET_NO, REVIEW_CONTENT, REVIEW_STAR_RATING)
+		VALUES(#{id}, #{movieNo}, #{ticketNo}, #{reContent}, #{star})
+	</insert>
+	
+	<select id="getReview" resultMap="ReviewResultMap" parameterType="String">
+		SELECT *
+		FROM REVIEW
+		WHERE REVIEW_MEMBER_ID = #{id}
+	</select>
+	
+	<select id="getPageReview" resultMap="myReviewResultMap">
+	<![CDATA[
+		WITH REVIEW_CTE AS (
+		    SELECT
+		        r.REVIEW_NO,
+		        m.MOVIE_NO,
+		        m.MOVIE_TITLE,
+		        m.MOVIE_MAIN_IMAGE,
+		        r.REVIEW_CONTENT,
+		        r.REVIEW_STAR_RATING,
+		        r.REVIEW_WRITE_DATE,
+		        COALESCE(l.LIKE_COUNT, 0) AS REVIEW_LIKE_COUNT,
+		        ROW_NUMBER() OVER (ORDER BY r.REVIEW_WRITE_DATE DESC) AS rnum
+		    FROM
+		        REVIEW r
+		        JOIN MOVIE m ON r.REVIEW_MOVIE_NO = m.MOVIE_NO
+		        LEFT JOIN (
+		            SELECT
+		                likes_review_no,
+		                COUNT(*) AS LIKE_COUNT
+		            FROM
+		                likes
+		            GROUP BY
+		                likes_review_no
+		        ) l ON r.REVIEW_NO = l.likes_review_no
+		    WHERE
+		        r.REVIEW_MEMBER_ID = #{id}
+		)
+		SELECT *
+		FROM REVIEW_CTE
+		WHERE rnum > #{offset} AND rnum <= #{offset} + #{limit}
+	]]>
+	</select>
+	
+	<delete id="deleteReview" parameterType="int">
+		DELETE FROM REVIEW
+		WHERE REVIEW_NO = #{no}
+	</delete>
+	
+	
+	<select id="checkReview" resultType="int">
+		SELECT  COUNT(*)
+		FROM REVIEW
+		WHERE REVIEW_MOVIE_NO = #{movieNo} AND REVIEW_MEMBER_ID = #{memberId} AND REVIEW_TICKET_NO = #{ticketNo}
+	</select>
+	
+</mapper>
