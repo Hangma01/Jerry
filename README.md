@@ -21,7 +21,7 @@
 ### Collaboration & Tools
 - Github, Jira
 ### ETC
-- ProtOne API, OAuth2(Google, Kakao, Naver)
+- PortOne API, OAuth2(Google, Kakao, Naver)
 <br><br><br>
 
 ## :busts_in_silhouette: 담당 역할
@@ -57,7 +57,7 @@
 
 ### 3. 영화 결제 페이지
   - 쿠폰을 사용하여 할인을 적용할 수 있음
-  - 결제 완료 후 이미 예약된 좌석일 경우 환불 처리됨
+  - 결제 완료 후 이미 예약된 좌석일 경우 환불 처리 후 좌석 선택 화면으로 이동
 
 * * *
 <img src="https://github.com/user-attachments/assets/ea58997e-a88c-48af-8cf0-00a8bbf0cc82" width="600" height="450"/>
