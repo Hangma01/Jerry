@@ -55,8 +55,6 @@
 		M.MOVIE_NO = R.REVIEW_MOVIE_NO
 		LEFT JOIN TICKET T ON M.MOVIE_NO =
 		T.TICKET_MOVIE_NO
-		WHERE
-		M.MOVIE_END_DATE >= SYSDATE
 		GROUP BY
 		M.MOVIE_NO,
 		M.MOVIE_TITLE,
@@ -65,7 +63,7 @@
 		RESERVATION_RATE DESC
 		FETCH FIRST 10 ROWS ONLY
 	</select>
-
+	
 	<!-- 개봉 예정일 순으로 영화 10개 목록 가져오기 -->
 	<select id="getScheduledRelease" resultMap="movieResultMap">
 		SELECT * FROM movie
