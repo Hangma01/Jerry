@@ -21,7 +21,7 @@
 ### Collaboration & Tools
 - Github, Jira
 ### ETC
-- PortOne API, OAuth2(Google, Kakao, Naver)
+- PortOne API, OAuth 2.0(Google, Kakao, Naver)
 <br><br><br>
 
 ## :busts_in_silhouette: 담당 역할
